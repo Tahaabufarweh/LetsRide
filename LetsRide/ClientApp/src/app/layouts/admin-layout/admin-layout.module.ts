@@ -11,7 +11,7 @@ import { IconsComponent } from '../../icons/icons.component';
 import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
-
+import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 import {
     MatAutocompleteModule,
     MatButtonModule,
@@ -53,6 +53,7 @@ import {
 import { OwlDateTimeModule, OwlNativeDateTimeModule } from 'ng-pick-datetime';
 import { LoginComponent } from 'app/login/login.component';
 import { TripsComponent } from 'trips/trips.component';
+import { SignupComponent } from 'app/signup/signup.component';
 
 @NgModule({
   imports: [
@@ -86,6 +87,7 @@ import { TripsComponent } from 'trips/trips.component';
         MatRippleModule,
         MatSelectModule,
         MatSidenavModule,
+        AngularDateTimePickerModule,
         MatSliderModule,
         MatSlideToggleModule,
         MatSnackBarModule,
@@ -102,6 +104,7 @@ import { TripsComponent } from 'trips/trips.component';
       TableListComponent,
       LoginComponent,
       TripsComponent,
+      SignupComponent,
     TypographyComponent,
     IconsComponent,
     MapsComponent,

@@ -1,5 +1,4 @@
 ﻿import { Component, OnInit } from '@angular/core';
-
 import {Validators, FormGroup, FormControl } from '@angular/forms';
 
 @Component({
@@ -11,8 +10,7 @@ import {Validators, FormGroup, FormControl } from '@angular/forms';
 export class SignupComponent {
 
 signUpForm = new FormGroup({
-    firstName: new FormControl('', Validators.required),
-    lastName: new FormControl('', Validators.required),
+    fullName: new FormControl('', Validators.required),
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', Validators.required),
     username: new FormControl('', Validators.required),
@@ -27,13 +25,11 @@ signUpForm = new FormGroup({
         return this.signUpForm.get('repeatPassword') as FormControl;
     }
 
-    get firstName() {
-        return this.signUpForm.get('firstName') as FormControl;
+    get fullName() {
+        return this.signUpForm.get('fullName') as FormControl;
     }
 
-    get lastName() {
-        return this.signUpForm.get('lastName') as FormControl;
-    }
+   
     get username() {
         return this.signUpForm.get('username') as FormControl;
     }

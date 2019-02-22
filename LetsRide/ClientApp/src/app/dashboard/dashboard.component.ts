@@ -63,7 +63,11 @@ export class DashboardComponent implements OnInit {
     submitTrip() {
 
     }
-
+    settings = {
+        bigBanner: false,
+        format: 'dd-MMM-yyyy hh:mm a',
+        timePicker: true
+    }
     changeDate() {
         console.log("angular")
         console.log(this.TripsForm)

@@ -35,21 +35,18 @@
                                 <mat-step [stepControl]="secondFormGroup">
 
                                     <ng-template matStepLabel>Complete your trip</ng-template>
-                                    <mat-form-field>
-                                        <input matInput [owlDateTime]="dt1" [owlDateTimeTrigger]="dt1" placeholder="Start Time" formControlName="StartTime">
-                                        <owl-date-time #dt1></owl-date-time>
-                                        <!--<mat-hint><b>Example:</b> exm@abc.com </mat-hint>-->
-                                        <mat-error *ngIf="StartTime.touched && StartTime.invalid">
-                                            Start Date is required
-                                        </mat-error>
-                                    </mat-form-field>
+                                    <angular2-date-picker formControlName="StartTime" [settings]="settings"></angular2-date-picker>
+
+                                   
                                     <br />
-                                    <mat-form-field>
-                                        <input matInput placeholder="Expected Arrival Time" formControlName="ExpectedArrivalTime">
-                                        <mat-error *ngIf="ExpectedArrivalTime.touched && ExpectedArrivalTime.invalid">
-                                            Expected Arrival Time is required
-                                        </mat-error>
-                                    </mat-form-field>
+                                    <br />
+                                    <br />
+                                    <br />
+
+                           
+                                        <angular2-date-picker formControlName="ExpectedArrivalTime" [settings]="settings"></angular2-date-picker>
+
+        
                                     <div class="text-right">
                                         <button mat-raised-button color="primary" style="margin-right:2px" matStepperPrevious>Back</button>
                                         <button mat-raised-button color="primary" matStepperNext>Next</button>
